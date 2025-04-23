@@ -23,21 +23,21 @@ const FaceitTeamsPage = () => {
       </div>
 
       {/* Card */}
-      <div className="w-full max-w-md bg-faceit-darker p-8 rounded-sm">
+      <div className="w-full max-w-xl bg-[#121212] p-8 rounded-sm">
         <h2 className="text-white text-center mb-6">FACEIT Teams приглашает вас присоединиться</h2>
 
         {/* Team invite */}
         <div className="bg-[#1A1A1A] p-5 rounded-sm mb-6">
           <div className="flex items-center gap-4">
-            <div className="w-16 h-16 overflow-hidden rounded-full">
-              <svg width="64" height="64" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="40" cy="40" r="40" fill="black"/>
-                <path d="M39.8 20C31.6 20 25 26.6 25 34.8C25 43 31.6 49.6 39.8 49.6C48 49.6 54.6 43 54.6 34.8C54.6 26.6 48 20 39.8 20ZM25.8 53.4C25.8 53.4 31.9 58.4 39.7 58.4C47.5 58.4 53.6 53.4 53.6 53.4L61.5 58.8L52.2 39.7C52.2 39.7 55.9 33.6 51.1 26.2C46.3 18.8 33.2 18.8 28.4 26.2C23.6 33.6 27.3 39.7 27.3 39.7L18 58.8L25.8 53.4Z" fill="white"/>
+            <div className="w-16 h-16 overflow-hidden rounded-full flex-shrink-0">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="32" fill="black"/>
+                <path d="M32 16C24 16 18 22 18 30C18 38 24 44 32 44C40 44 46 38 46 30C46 22 40 16 32 16ZM18.5 48C18.5 48 24 52 32 52C40 52 45.5 48 45.5 48L52 52L44 36C44 36 47 31 43 25C39 19 25 19 21 25C17 31 20 36 20 36L12 52L18.5 48Z" fill="white"/>
               </svg>
             </div>
             <div className="flex-1">
               <h3 className="text-white text-xl font-bold">BleSeason</h3>
-              <button className="text-xs font-semibold bg-transparent text-white mt-1">ПОЛУЧИТЬ ПРИГЛАШЕНИЕ</button>
+              <button className="text-xs font-semibold bg-transparent text-white uppercase mt-1">получить приглашение</button>
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@ const FaceitTeamsPage = () => {
             id="terms" 
             checked={agreed} 
             onCheckedChange={(checked) => setAgreed(checked as boolean)} 
-            className="mt-1 data-[state=checked]:bg-faceit-orange data-[state=checked]:border-faceit-orange"
+            className="mt-1 data-[state=checked]:bg-[#FF5500] data-[state=checked]:border-[#FF5500]"
           />
           <label htmlFor="terms" className="text-sm text-white">
             Подтверждая участие, я соглашаюсь с условиями FACEIT Teams и правилами FACEIT
@@ -57,7 +57,7 @@ const FaceitTeamsPage = () => {
 
         {/* Confirm button */}
         <Button 
-          className="w-full bg-faceit-button hover:bg-faceit-orange transition-colors text-white uppercase font-bold py-6"
+          className="w-full bg-[#c33200] hover:bg-[#FF5500] transition-colors text-white uppercase font-bold py-6"
           disabled={!agreed}
         >
           ПОДТВЕРДИТЬ
@@ -65,15 +65,15 @@ const FaceitTeamsPage = () => {
       </div>
 
       {/* Footer */}
-      <div className="mt-6 flex flex-col md:flex-row items-center justify-between w-full max-w-md">
+      <div className="mt-6 flex flex-col md:flex-row items-center justify-between w-full max-w-xl">
         {/* Language selector */}
         <div className="mb-4 md:mb-0">
           <Select defaultValue="ru">
-            <SelectTrigger className="w-40 bg-faceit-darker text-white border-none">
+            <SelectTrigger className="w-40 bg-[#121212] text-white border-none">
               <SelectValue placeholder="Русский" />
               <ChevronDown className="h-4 w-4 opacity-50" />
             </SelectTrigger>
-            <SelectContent className="bg-faceit-darker text-white">
+            <SelectContent className="bg-[#121212] text-white">
               <SelectItem value="ru">Русский</SelectItem>
               <SelectItem value="en">English</SelectItem>
             </SelectContent>
